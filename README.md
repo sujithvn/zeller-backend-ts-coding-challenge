@@ -12,7 +12,6 @@ As we're launching our new computer store, we would like to have a few opening d
 
 - we're going to have a 3 for 2 deal on Apple TVs. For example, if you buy 3 Apple TVs, you will pay the price of 2 only
 - the brand new Super iPad will have a bulk discounted applied, where the price will drop to $499.99 each, if someone buys more than 4
-- we will bundle in a free VGA adapter free of charge with every MacBook Pro sold
 
 As our Sales manager is quite indecisive, we want the pricing rules to be as flexible as possible as they can change in the future with little notice.
 
@@ -37,9 +36,6 @@ Total expected: $249.00
 
 SKUs Scanned: atv, ipd, ipd, atv, ipd, ipd, ipd
 Total expected: $2718.95
-
-SKUs Scanned: mbp, vga, ipd
-Total expected: $1949.98
 
 Notes on implementation:
 
