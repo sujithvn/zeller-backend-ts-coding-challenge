@@ -42,7 +42,7 @@ export class CheckoutService implements Cart {
             // if the quantity > maxQuantity for the offer, apply the offer price for the maxQuantity and apply the product price for the remaining quantity
             // if the quantity is between the min and max quantity (inclusive), apply the offer price
             // if the isGrouped is true, separate the quantity into groups of minQuantity and apply the offer price for each group
-            // if isGrouped is true, the offerValue is the group discount and has to be applied to each group
+            // if isGrouped is true, the offerValue is the number of items to be discounted
             // if the offerType = 'PERCENT' apply the offerValue as a percentage of the product price
             // if the offerType = 'NUMBER' apply the offerValue as the price for the offer quantity 
 
