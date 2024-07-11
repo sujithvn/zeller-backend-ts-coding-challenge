@@ -46,3 +46,47 @@ Notes on implementation:
 - don't use any frameworks
 
 When you've finished, send through the link to your github-repo.
+
+Solution
+-----------------
+
+We can run/test with below commands.
+```
+npm start
+
+npm run test
+```
+I have included an easy and generic way for adding new pricing-plan/offer. It is easy to extend this with minimal code change, just adding one line entry for each new plan.
+
+We can also use the same plan for multiple SKUs by just re-using the offer-id (with `productOnOffer.addOffer`).
+
+Examples below:
+
+    const THREE_FOR_TWO_OFFER = new Offer("THREE_FOR_TWO", true, 3, 3, OfferType.NUMBER, 1);
+    
+
+In the above example, the 2nd argument `true` for the field `isGrouped` specifies that we are applying discount for buying in groups, like 3 for price of 2. In this case we set min & max quantity as 3 and the last field `offerValue` specifies the number of items to be discounted for each such group. In the above case, it is 1 qty (3 for 2).
+
+---
+
+    const BULK_ABOVE_4_OFFER = new Offer("BULK_ABOVE_4", false, 4, 10, OfferType.NUMBER, 499.99);
+
+In the above example, it is NOT a `grouped` offer. Here we are applying a flat price of 499.99 if the quantity is above 4
+
+---
+
+    
+    const BULK_ABOVE_6_10PERCENT = new Offer("BULK_ABOVE_6_10PERCENT", false, 6, 20, OfferType.PERCENT, 10);
+
+In the above example, it is NOT a `grouped` offer. Here we are applying a 10% of product price if the quantity is above 6
+
+---
+
+Issues & Future improvements
+---
+
+There are few items to be fixed for the above solution. I have not implemented them since it was not part of the core requirement.
+
+1. Multiple pricingPlan for single SKU. Currently we support only one plan, if multiple plans has to be supported, we need to implement logic for setting priority and avoiding clashes
+2. Add new fields for each plan like `startDate` and `endDate`. This will restrict the plan to specific offer periods.
+3. We can improve to track the number of times a offer is used, offer used per customer etc.

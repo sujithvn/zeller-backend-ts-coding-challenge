@@ -1,0 +1,23 @@
+{
+  "name": "zeller-backend-ts-coding-challenge",
+  "version": "1.0.0",
+  "description": "Zeller is starting a computer store. You have been engaged to build the checkout system. We will start with the following products in our catalogue",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Sujith",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.2",
+    "typescript": "^5.5.3"
+  }
+}
